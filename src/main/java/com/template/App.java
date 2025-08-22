@@ -94,67 +94,104 @@ public class App {
 
     // 11. Sum of Elements in a List
     public int sumList(List<Integer> list) {
-        // TODO: Implement this method
-        return 0;
+        int sum = 0;
+        for (int num : list) {
+            sum += num;
+        }
+        return sum;
     }
 
     // 12. Find the Largest Element in a List
     public int findMax(List<Integer> list) {
-        // TODO: Implement this method
-        return 0;
+        if (list == null || list.isEmpty()) {
+            throw new IllegalArgumentException("list is empty");
+        }
+        int max = list.get(0);
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) > max) {
+                max = list.get(i);
+            }
+        }
+        return max;
     }
 
     // 13. Filter Even Numbers from a List
     public List<Integer> filterEvenNumbers(List<Integer> list) {
-        // TODO: Implement this method
-        return new ArrayList<>();
+        List<Integer> evenList = new ArrayList<>();
+        for (int num : list) {
+            if (num % 2 == 0) {
+                evenList.add(num);
+            }
+        }
+        return evenList;
     }
 
     // 14. Concatenate Two Lists
     public List<String> concatenateLists(List<String> list1, List<String> list2) {
-        // TODO: Implement this method
-        return new ArrayList<>();
+        List<String> concatenatedList = new ArrayList<>();
+        for (int i = 0 ; i < list1.size(); i++) {
+            concatenatedList.add(list1.get(i));
+        }
+        for (int i = 0 ; i < list2.size(); i++) {
+            concatenatedList.add(list2.get(i));
+        }
+        return concatenatedList;
     }
 
     // 15. Check if List Contains Element
     public boolean listContains(List<String> list, String element) {
-        // TODO: Implement this method
-        return false;
+        return list.contains(element);
     }
 
     // 16. Convert Strings to Uppercase
     public List<String> toUpperCase(List<String> list) {
-        // TODO: Implement this method
-        return new ArrayList<>();
+        List<String> uppercasedList = new ArrayList<>();
+        for (String converter : list) {
+            converter = converter.toUpperCase();
+            uppercasedList.add(converter);
+        }
+        return uppercasedList;
     }
 
     // 17. Remove Duplicates from a List
     public List<Integer> removeDuplicates(List<Integer> list) {
-        // TODO: Implement this method
-        return new ArrayList<>();
+        List<Integer> noDupes = new ArrayList<>();
+        for (int num : list) {
+            if (noDupes.contains(num)) {
+                noDupes = noDupes;
+            }
+            else {
+                noDupes.add(num);
+        }
+    }
+        return noDupes;
     }
 
     // 18. Convert List to Set for Unique Elements
     public Set<Integer> listToSet(List<Integer> list) {
-        // TODO: Implement this method
-        return new HashSet<>();
+        Set<Integer> set = new HashSet<>();
+        for (int num : list) {
+            set.add(num);
+        }
+        return set;
     }
 
     // 19. Check if Map Contains Key
     public boolean mapContainsKey(Map<String, String> map, String key) {
-        // TODO: Implement this method
-        return false;
+        return map.containsKey(key);
     }
 
     // 20. Check if Map Contains Value
     public boolean mapContainsValue(Map<String, String> map, String value) {
-        // TODO: Implement this method
-        return false;
+        return map.containsValue(value);
     }
 
     // 21. Iterate Over a Map
     public List<String> iterateMap(Map<String, String> map) {
-        // TODO: Implement this method
-        return new ArrayList<>();
+        List<String> iteratedList = new ArrayList<>();
+        for (String key: map.keySet()) {
+            iteratedList.add(key + " -> " + map.get(key));
+        }
+        return iteratedList;
     }
 }
