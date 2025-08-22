@@ -9,6 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 class AppTest {
 
@@ -119,5 +121,40 @@ class AppTest {
         List<Integer> input = Arrays.asList(1, 2, 2, 3, 1, 4);
         List<Integer> expected = Arrays.asList(1, 2, 3, 4);
         assertEquals(expected, exercises.removeDuplicates(input));
+    }
+
+    @Test
+    void testListToSet() {
+        App app = new App();
+        List<Integer> listWithDuplicates = Arrays.asList(1, 2, 2, 3, 1, 3);
+        Set<Integer> expectedSet = Set.of(1, 2, 3);
+        assertEquals(expectedSet, app.listToSet(listWithDuplicates));
+    }
+
+    @Test
+    void testMapContainsKey() {
+        App app = new App();
+        Map<String, String> map = Map.of("Hello", "World", "Java", "Programming");
+        assertTrue(app.mapContainsKey(map, "Hello"));
+        assertFalse(app.mapContainsKey(map, "Python"));
+    }
+
+    @Test
+    void testMapContainsValue() {
+        App app = new App();
+        Map<String, String> map = Map.of("Hello", "World", "Java", "Programming");
+        assertTrue(app.mapContainsValue(map, "World"));
+        assertFalse(app.mapContainsValue(map, "Scripting"));
+    }
+
+    @Test
+    void testIterateMap() {
+        App app = new App();
+        Map<String, String> map = Map.of("Hello", "World", "Java", "Programming");
+        List<String> expected = Arrays.asList("Hello -> World", "Java -> Programming");
+        List<String> result = app.iterateMap(map);
+        Collections.sort(expected);
+        Collections.sort(result);
+        assertEquals(expected, result);
     }
 }

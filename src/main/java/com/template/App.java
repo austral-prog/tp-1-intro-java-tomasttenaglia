@@ -1,7 +1,11 @@
 package com.template;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class App {
 
@@ -103,6 +107,30 @@ public class App {
 
     // 17. Remove Duplicates from a List
     public List<Integer> removeDuplicates(List<Integer> list) {
+        // TODO: Implement this method
+        return new ArrayList<>();
+    }
+
+    // 18. Convert List to Set for Unique Elements
+    public Set<Integer> listToSet(List<Integer> list) {
+        // TODO: Implement this method
+        return new HashSet<>();
+    }
+
+    // 19. Check if Map Contains Key
+    public boolean mapContainsKey(Map<String, String> map, String key) {
+        // TODO: Implement this method
+        return false;
+    }
+
+    // 20. Check if Map Contains Value
+    public boolean mapContainsValue(Map<String, String> map, String value) {
+        // TODO: Implement this method
+        return false;
+    }
+
+    // 21. Iterate Over a Map
+    public List<String> iterateMap(Map<String, String> map) {
         // TODO: Implement this method
         return new ArrayList<>();
     }
